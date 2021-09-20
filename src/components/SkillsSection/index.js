@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import MainHeader from '../MainHeader'
 import CategoryList from '../CategoryList'
@@ -21,6 +21,9 @@ const Styled = styled.section`
 `
 
 function SkillsSection() {
+
+    const [category, setCategory] = useState();
+
     return (
         <Section altColor>
             <Container>
@@ -28,7 +31,10 @@ function SkillsSection() {
                     <MainHeader string="Diverse Skill Set" override />
                     <br />
                     <div id="skill-case">
-                        <CategoryList />
+                        <CategoryList
+                            handleHover={category => setCategory(category.toLowerCase())}
+                            handleLostHover={() => setCategory(null)}
+                        />
                         <div
                             style={{
                                 backgroundColor: color.lightest,
@@ -36,7 +42,7 @@ function SkillsSection() {
                             }}
                         />
                         <div>
-                            <ImageDump />
+                            <ImageDump hoveredCategory={category} />
                         </div>
                     </div>
                 </Styled>

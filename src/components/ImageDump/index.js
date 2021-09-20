@@ -6,36 +6,6 @@ import { color } from '../../settings';
 const svgFolder = '/svg-logos/';
 
 
-const StyledCard = styled.div`
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: inline-flex;
-    flex-direction: column;
-    margin: 15px;
-    color: ${color.medium};
-    :hover {
-        color: ${color.darkest};
-        img {
-            transform: rotate(2deg) scale(110%);
-            filter: opacity(100%);
-        }
-    }
-`
-
-const Card = ({ fileLoc, label }) => {
-    console.log({ label });
-    return (
-        <StyledCard>
-            <div>
-                <img src={`${svgFolder + fileLoc}.svg`} alt={label} />
-            </div>
-            <div>
-                {label}
-            </div>
-        </StyledCard>
-    )
-}
-
-
 const Styled = styled.div`
     img {
         max-height: 4rem;
@@ -47,11 +17,46 @@ const Styled = styled.div`
     }
 `
 
-function ImageDump() {
+const StyledCard = styled.div`
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: inline-flex;
+    flex-direction: column;
+    margin: 15px;
+    color: ${color.medium};
+    &.hovered {
+        background-color: lemonchiffon;
+    }
+    &.hovered, :hover {
+        color: ${color.darkest};
+        img {
+            transform: rotate(2deg) scale(110%);
+            filter: opacity(100%);
+        }
+    }
+`
+
+const Card = ({ filename, label, categories, hoveredCategory }) => {
+    const thisCategory = (categories.indexOf(hoveredCategory) > -1)
+    return (
+        <StyledCard className={thisCategory && 'hovered'}>
+            <div>
+                <img src={`${svgFolder + filename}.svg`} alt={label} />
+            </div>
+            <div>
+                {label}
+            </div>
+        </StyledCard>
+    )
+}
+
+
+
+
+function ImageDump({ hoveredCategory }) {
 
     return (
         <Styled>
-            {logos.map((el, i) => <Card fileLoc={el.filename} label={el.label} />)}
+            {logos.map((el, i) => <Card {...el} hoveredCategory={hoveredCategory} />)}
         </Styled>
     )
 }
