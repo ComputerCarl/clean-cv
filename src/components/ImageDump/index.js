@@ -6,7 +6,12 @@ import { color } from '../../settings';
 const svgFolder = '/svg-logos/';
 
 
-const Styled = styled.div`
+const StyledCard = styled.div`
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: inline-flex;
+    flex-direction: column;
+    margin: 15px;
+    color: ${color.medium};
     img {
         max-height: 4rem;
         max-width: 7rem;
@@ -15,14 +20,6 @@ const Styled = styled.div`
         transition: all 0.25s;
 
     }
-`
-
-const StyledCard = styled.div`
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: inline-flex;
-    flex-direction: column;
-    margin: 15px;
-    color: ${color.medium};
     &.hovered {
         background-color: lemonchiffon;
     }
@@ -61,9 +58,9 @@ const Card = ({ filename, label, categories, hoveredCategory, handleMouseEnter, 
 function ImageDump(props) {
 
     return (
-        <Styled>
+        <>
             {logos.map((el, i) => <Card key={i} {...el} {...props} />)}
-        </Styled>
+        </>
     )
 }
 
