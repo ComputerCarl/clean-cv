@@ -6,6 +6,7 @@ import { Container } from 'semantic-ui-react'
 import { color } from '../../settings'
 import ImageDump from '../ImageDump'
 import Section from '../Section'
+import { P } from '../Stylers/index'
 
 const Styled = styled.section`
     text-align: center;
@@ -30,6 +31,7 @@ function SkillsSection() {
             <Container>
                 <Styled>
                     <MainHeader string="Diverse Skill Set" override />
+                    <P>I am amazeballs</P>
                     <br />
                     <div id="skill-case">
                         <CategoryList
