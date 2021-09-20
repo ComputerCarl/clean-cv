@@ -25,14 +25,14 @@ const StyledWord = styled.div`
 `
 
 
-function CategoryList({ handleHover, handleLostHover }) {
+function CategoryList({ handleMouseEnter, handleMouseLeave }) {
     return (
         <MonoTyped>
             <StyledWord>
                 {categories.map((el, i) =>
                     <div key={i}
-                        onMouseEnter={() => handleHover(el)}
-                        onMouseLeave={() => handleLostHover()}
+                        onMouseEnter={() => handleMouseEnter(el)}
+                        onMouseLeave={() => handleMouseLeave()}
                     >{el}</div>
                 )}
             </StyledWord>

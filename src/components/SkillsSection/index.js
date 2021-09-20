@@ -32,8 +32,8 @@ function SkillsSection() {
                     <br />
                     <div id="skill-case">
                         <CategoryList
-                            handleHover={category => setCategory(category.toLowerCase())}
-                            handleLostHover={() => setCategory(null)}
+                            handleMouseEnter={category => setCategory(category.toLowerCase())}
+                            handleMouseLeave={() => setCategory(null)}
                         />
                         <div
                             style={{
