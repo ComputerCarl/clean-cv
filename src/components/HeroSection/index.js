@@ -8,7 +8,6 @@ import UnderWords from '../UnderWords/index';
 import Button from '../Button/index'
 
 const Responsive = styled.div`
-    padding: 0;
     display: flex;
     justify-content: space-around;
     align-items: center;

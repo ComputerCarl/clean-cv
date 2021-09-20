@@ -4,6 +4,10 @@ import PropTypes from "prop-types";
 
 const Styled = styled.div`
     font-size: 2.2em;
+    &&& {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
     text-transform: uppercase;
     ${({ override }) => {
         return override ?

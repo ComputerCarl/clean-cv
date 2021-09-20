@@ -3,22 +3,30 @@ import { categories } from './skills'
 import styled from 'styled-components'
 import { MonoTyped } from '../Stylers/index'
 
-const Styled = styled.ul`
+const StyledWord = styled.div`
+    div {
+        margin: 10px;
+    }
+    display: flex;
+    flex-direction: column;
     text-align: right;
-    list-style: none;
-    line-height: 2rem;
+    @media(max-width: 600px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
 `
 
 
 function CategoryList() {
     return (
-        <Styled>
-            <MonoTyped>
+        <MonoTyped>
+            <StyledWord>
                 {categories.map((el, i) =>
-                    <li key={i}>{el}</li>
+                    <div key={i}>{el}</div>
                 )}
-            </MonoTyped>
-        </Styled>
+            </StyledWord>
+        </MonoTyped>
     )
 }
 

@@ -5,34 +5,43 @@ import CategoryList from '../CategoryList'
 import { Container } from 'semantic-ui-react'
 import { color } from '../../settings'
 import ImageDump from '../ImageDump'
+import Section from '../Section'
 
 const Styled = styled.section`
     text-align: center;
     div#skill-case {
         display: flex;
+        flex-direction: row;
         justify-content: space-around;
+        align-items: center;
+        @media (max-width: 600px) {
+            flex-direction: column;
+        }
     }
 `
 
 function SkillsSection() {
     return (
-        <Styled>
+        <Section altColor>
             <Container>
-                <MainHeader string="Diverse Skill Set" override />
-                <div id="skill-case">
-                    <CategoryList />
-                    <div
-                        style={{
-                            backgroundColor: color.lightest,
-                            width: '1px',
-                        }}
-                    />
-                    <div>
-                        <ImageDump />
+                <Styled>
+                    <MainHeader string="Diverse Skill Set" override />
+                    <br />
+                    <div id="skill-case">
+                        <CategoryList />
+                        <div
+                            style={{
+                                backgroundColor: color.lightest,
+                                width: '1px',
+                            }}
+                        />
+                        <div>
+                            <ImageDump />
+                        </div>
                     </div>
-                </div>
+                </Styled>
             </Container>
-        </Styled>
+        </Section>
     )
 }
 
