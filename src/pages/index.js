@@ -4,6 +4,10 @@ import Seo from '../components/seo'
 
 import HeroSection from '../components/HeroSection'
 import SkillsSection from '../components/SkillsSection'
+import SamplesSection from '../components/SamplesSection'
+import ContactSection from '../components/ContactSection'
+import BulletsSection from '../components/BulletsSection'
+import SiteFooter from '../components/SiteFooter'
 
 function index(props) {
     return (
@@ -11,6 +15,10 @@ function index(props) {
             <Seo title="Home Page" />
             <HeroSection />
             <SkillsSection />
+            <BulletsSection />
+            <SamplesSection />
+            <ContactSection />
+            <SiteFooter />
         </Layout>
     )
 }

@@ -11,6 +11,7 @@ const StyledCard = styled.div`
     display: inline-flex;
     flex-direction: column;
     margin: 15px;
+    cursor: pointer;
     color: ${color.medium};
     img {
         max-height: 4rem;

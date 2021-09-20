@@ -26,7 +26,7 @@ const Styled = styled.div`
 function MainHeader({ string, override }) {
     return (
         <Styled override={override}>
-            {string.match(/\w+/g).map((word, i) => <span>{word}{' '}</span>)}
+            {string.match(/\w+/g).map((word, i) => <span key={i}>{word}{' '}</span>)}
         </Styled>
     )
 }
