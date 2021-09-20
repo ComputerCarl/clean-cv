@@ -23,6 +23,7 @@ const Styled = styled.section`
 function SkillsSection() {
 
     const [category, setCategory] = useState();
+    const [hoveredCategories, setHoveredCategories] = useState([]);
 
     return (
         <Section altColor>
@@ -32,6 +33,7 @@ function SkillsSection() {
                     <br />
                     <div id="skill-case">
                         <CategoryList
+                            hoveredCategories={hoveredCategories}
                             handleMouseEnter={category => setCategory(category.toLowerCase())}
                             handleMouseLeave={() => setCategory(null)}
                         />
@@ -42,7 +44,11 @@ function SkillsSection() {
                             }}
                         />
                         <div>
-                            <ImageDump hoveredCategory={category} />
+                            <ImageDump
+                                hoveredCategory={category}
+                                handleMouseEnter={(el) => setHoveredCategories(el)}
+                                handleMouseLeave={() => setHoveredCategories([])}
+                            />
                         </div>
                     </div>
                 </Styled>

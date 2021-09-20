@@ -8,7 +8,7 @@ const StyledWord = styled.div`
         margin: 10px;
         border: 1px solid whitesmoke;
         padding: 3px;
-        :hover {
+        &.hovered, :hover {
             background-color: lemonchiffon;
         }
     }
@@ -25,12 +25,13 @@ const StyledWord = styled.div`
 `
 
 
-function CategoryList({ handleMouseEnter, handleMouseLeave }) {
+function CategoryList({ handleMouseEnter, handleMouseLeave, hoveredCategories }) {
     return (
         <MonoTyped>
             <StyledWord>
                 {categories.map((el, i) =>
                     <div key={i}
+                        className={(hoveredCategories.indexOf(el.toLowerCase()) > -1) ? 'hovered' : ''}
                         onMouseEnter={() => handleMouseEnter(el)}
                         onMouseLeave={() => handleMouseLeave()}
                     >{el}</div>

@@ -35,10 +35,16 @@ const StyledCard = styled.div`
     }
 `
 
-const Card = ({ filename, label, categories, hoveredCategory }) => {
+const Card = ({ filename, label, categories, hoveredCategory, handleMouseEnter, handleMouseLeave }) => {
     const thisCategory = (categories.indexOf(hoveredCategory) > -1)
     return (
-        <StyledCard className={thisCategory && 'hovered'}>
+        <StyledCard
+            className={thisCategory ? 'hovered' : ''}
+            onMouseEnter={() => handleMouseEnter(categories)}
+            onMouseLeave={() => handleMouseLeave()}
+
+        >
+
             <div>
                 <img src={`${svgFolder + filename}.svg`} alt={label} />
             </div>
@@ -52,11 +58,11 @@ const Card = ({ filename, label, categories, hoveredCategory }) => {
 
 
 
-function ImageDump({ hoveredCategory }) {
+function ImageDump(props) {
 
     return (
         <Styled>
-            {logos.map((el, i) => <Card {...el} hoveredCategory={hoveredCategory} />)}
+            {logos.map((el, i) => <Card key={i} {...el} {...props} />)}
         </Styled>
     )
 }
