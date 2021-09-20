@@ -4,6 +4,8 @@ import MainHeader from '../MainHeader'
 import styled from 'styled-components'
 import TypedHeader from '../TypedHeader/index'
 import svgCarlCanDoIt from '../../images/carl-at-computer.svg'
+import UnderWords from '../UnderWords/index';
+import Button from '../Button/index'
 
 const Responsive = styled.div`
     padding: 0;
@@ -12,11 +14,14 @@ const Responsive = styled.div`
     align-items: center;
     flex-direction: column;
     img {
-        filter: opacity(75%);
+        filter: opacity(60%);
         padding-top: 2rem;
         width: 200px;
     }
     @media (min-width: 600px) {
+        /* & > * {
+            width: 50%;
+        } */
         padding: 25px;
         flex-direction: row;
         img {
@@ -49,13 +54,16 @@ function HeroSection() {
             <Responsive>
                 <div>
                     <MainHeader string="Carl Mann" />
-                    <Styler>
+                    <Styler color="#45b4e7">
                         {'{ '}
                     </Styler>
                     <TypedHeader typeOptions={typeOptions} StylerComponent={Styler} />
-                    <Styler>
+                    <Styler color="#45b4e7">
                         {' }'}
                     </Styler>
+                    <UnderWords />
+                    <br />
+                    <Button />
                 </div>
                 <div>
                     <img src={svgCarlCanDoIt} alt="carl at computer" />

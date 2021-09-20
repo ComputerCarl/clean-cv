@@ -1,13 +1,6 @@
 import React from 'react';
 import TypedStrings from '.';
-import styled from 'styled-components';
-
-const Styler = styled.span`
-    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
-    color: grey;
-
-`
+import { MonoTyped } from '../Stylers';
 
 export default {
     component: TypedStrings,
@@ -31,5 +24,5 @@ Default.args = {
             'technology generalist',
         ],
     },
-    StylerComponent: Styler
+    StylerComponent: MonoTyped
 }

@@ -41,10 +41,10 @@ export default TypedStrings
 TypedStrings.defaultProps = {
     typeOptions: {
         strings: [],
-        startDelay: 250,
+        startDelay: 500,
         typeSpeed: 40,
         backSpeed: 20,
-        backDelay: 750,
+        backDelay: 1200,
         loop: false,
         cursorChar: "|",
     }
