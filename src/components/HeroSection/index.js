@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import Section from '../Section'
 import MainHeader from '../MainHeader'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import TypedHeader from '../TypedHeader/index'
 import svgCarlCanDoIt from '../../images/carl-at-computer.svg'
 import UnderWords from '../UnderWords/index';
 import Button from '../Button/index'
+import DownIndicator from '../DownIndicator/index'
 
 const Responsive = styled.div`
     display: flex;
@@ -48,24 +49,9 @@ var typeOptions = {
 }
 
 function HeroSection() {
-    const [hasScrolled, setHasScrolled] = useState(false);
-    const [showArrow, setShowArrow] = useState(false);
-
-    function disableArrow() {
-        if (!hasScrolled) setShowArrow(true);
-    }
-
-    useEffect(() => {
-        var timedEvt = setTimeout(disableArrow, 13000);
-        window.addEventListener('scroll', () => {
-            setHasScrolled(true);
-            setShowArrow(false);
-            clearTimeout(timedEvt);
-        }, { passive: true });
-    }, [])
-
     return (
         <Section fullHeight>
+            <DownIndicator />
             <Responsive>
                 <div>
                     <MainHeader string="Carl Mann" />
@@ -77,14 +63,13 @@ function HeroSection() {
                         {' }'}
                     </Styler>
                     <UnderWords />
-                    <br />
+                    <div style={{ height: '30px' }} />
                     <Button />
                 </div>
                 <div>
                     <img src={svgCarlCanDoIt} alt="carl at computer" />
                 </div>
             </Responsive>
-            {showArrow.toString()}
         </Section>
     )
 }

@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { createGlobalStyle } from 'styled-components'
 import 'semantic-ui-css/semantic.min.css'
+import ScrollTo from './ScrollTo/index'
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -24,6 +25,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <GlobalStyle />
+      <ScrollTo />
       {children}
     </>
   )
