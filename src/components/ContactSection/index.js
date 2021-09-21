@@ -76,7 +76,7 @@ function ContactSection() {
                         <IconStyleWrapper>
                             {contactLinks.map((el, i) => {
                                 var Icon = el.icon;
-                                return (<div>
+                                return (<div key={i}>
                                     <Icon />
                                     <a href={el.link}>
                                         <span>{el.label}</span>

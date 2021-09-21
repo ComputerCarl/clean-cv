@@ -14,12 +14,12 @@ const StyledCard = styled.div`
     cursor: pointer;
     color: ${color.medium};
     img {
-        max-height: 4rem;
-        max-width: 7rem;
+        max-height: 3.5rem;
+        max-width: 8rem;
         vertical-align: middle;
         filter: opacity(65%);
         transition: all 0.25s;
-
+        margin: 0 5px;
     }
     &.hovered {
         background-color: lemonchiffon;

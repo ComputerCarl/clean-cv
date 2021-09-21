@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Section from '../Section'
 import MainHeader from '../MainHeader'
 import styled from 'styled-components'
@@ -48,8 +48,24 @@ var typeOptions = {
 }
 
 function HeroSection() {
+    const [hasScrolled, setHasScrolled] = useState(false);
+    const [showArrow, setShowArrow] = useState(false);
+
+    function disableArrow() {
+        if (!hasScrolled) setShowArrow(true);
+    }
+
+    useEffect(() => {
+        var timedEvt = setTimeout(disableArrow, 13000);
+        window.addEventListener('scroll', () => {
+            setHasScrolled(true);
+            setShowArrow(false);
+            clearTimeout(timedEvt);
+        }, { passive: true });
+    }, [])
+
     return (
-        <Section>
+        <Section fullHeight>
             <Responsive>
                 <div>
                     <MainHeader string="Carl Mann" />
@@ -68,6 +84,7 @@ function HeroSection() {
                     <img src={svgCarlCanDoIt} alt="carl at computer" />
                 </div>
             </Responsive>
+            {showArrow.toString()}
         </Section>
     )
 }

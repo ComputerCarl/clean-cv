@@ -65,7 +65,7 @@ function BulletsSection() {
                         <MainHeader string="Hire Me" />
                         <br />
                         <Styled>
-                            {cards.map((el, i) => <IconCard {...el} />)}
+                            {cards.map((el, i) => <IconCard key={i} {...el} />)}
                         </Styled>
                     </div>
                 </AuxGraphic>
