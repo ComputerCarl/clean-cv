@@ -13,7 +13,7 @@ const Div = styled.div`
 function UnderWords() {
     return (
         <Div>
-            I'm a geek and software developer who loves solving problems and helping people.
+            I'm a computer geek and software developer who loves solving problems and helping people.
         </Div>
     )
 }

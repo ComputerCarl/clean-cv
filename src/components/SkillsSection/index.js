@@ -31,8 +31,14 @@ function SkillsSection() {
             <Container>
                 <Styled>
                     <MainHeader string="Diverse Skill Set" override />
-                    <P>I am amazeballs</P>
-                    <br />
+                    <div style={{ textAlign: 'center', display: 'inline-block' }}>
+                        <P>
+                            I like to learn and it shows.
+                            Here are a few of the technologies I'm already familiar with.
+                        </P>
+                    </div>
+                    <div style={{ height: '30px' }} />
+
                     <div id="skill-case">
                         <CategoryList
                             hoveredCategories={hoveredCategories}

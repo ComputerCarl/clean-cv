@@ -19,9 +19,9 @@ const A = styled.a`
     }
 `
 
-function Button({ text }) {
+function Button({ text, href }) {
     return (
-        <A href="#footer">
+        <A href={href}>
             {text || 'Contact Me'}
         </A>
     )

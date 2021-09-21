@@ -43,7 +43,6 @@ var typeOptions = {
     strings: [
         'web developer',
         'customer support agent',
-        'virtual assistant',
         'technology generalist',
     ]
 }
@@ -64,7 +63,7 @@ function HeroSection() {
                     </Styler>
                     <UnderWords />
                     <div style={{ height: '30px' }} />
-                    <Button />
+                    <Button href="#contact_section" />
                 </div>
                 <div>
                     <img src={svgCarlCanDoIt} alt="carl at computer" />

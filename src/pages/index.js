@@ -17,7 +17,8 @@ function index(props) {
             <SkillsSection />
             <BulletsSection />
             <SamplesSection />
-            <ContactSection />
+            <ContactSection  />
+            <a id="contact_section"  />
             <SiteFooter />
         </Layout>
     )
