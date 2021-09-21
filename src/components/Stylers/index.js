@@ -19,4 +19,5 @@ export const P = styled.p`
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: ${color.medium};
     font-size: 1rem;
+    text-align: justify;
 `

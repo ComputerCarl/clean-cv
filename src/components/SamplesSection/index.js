@@ -1,27 +1,53 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import MainHeader from '../MainHeader'
-import { color } from '../../settings'
 import Section from '../Section'
-import {Container} from 'semantic-ui-react'
+import { Container } from 'semantic-ui-react'
+import ProjectCard from '../ProjectCard/index'
+import jpgProjectDomfeed from '../../images/project-domfeed.jpg'
+// import {StaticImage} from 'gatsby';
 
 const Styled = styled.section`
     text-align: center;
-    div#skill-case {
+    div.projects-stacking {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        align-items: center;
-        @media (max-width: 600px) {
+        @media(max-width: 800px) {
             flex-direction: column;
+        }
+        & > * {
+            margin: 20px;
         }
     }
 `
 
-function SkillsSection() {
+const projects = [
+    {
+        image: jpgProjectDomfeed,
+        imageAlt: 'Laptop with React project',
+        title: 'Domain Name Finder',
+        text: `
+        This application, entirely designed and engineered by me, has several microservices, including: the (main) front end which pulls articles and products (premium domain names) during build time into a static-site-generator; a Mongo database; services (front and back) to import a humongous list of registered domains into a database; and external API calls for domain verification.
+        `,
+        buttonLink: 'https://domfeed.com',
+        buttonText: 'Visit Site'
+    },
+    {
+        image: jpgProjectDomfeed,
+        imageAlt: 'Laptop with React project',
+        title: 'Domain Name Finder',
+        text: `
+        This application, entirely designed and engineered by me, has several microservices, including: the (main) front end which pulls articles and products (premium domain names) during build time into a static-site-generator; a Mongo database; services (front and back) to import a humongous list of registered domains into a database; and external API calls for domain verification.
+        `,
+        buttonLink: 'https://domfeed.com', buttonText: 'Visit Site'
+    },
 
-    const [category, setCategory] = useState();
-    const [hoveredCategories, setHoveredCategories] = useState([]);
+]
+
+
+
+function SamplesSection() {
 
     return (
         <Section altColor>
@@ -29,11 +55,13 @@ function SkillsSection() {
                 <Styled>
                     <MainHeader string="Project Samples" override />
                     <br />
-                    styled
+                    <div className="projects-stacking">
+                        {projects.map((el, i) => <ProjectCard key={i} {...el} />)}
+                    </div>
                 </Styled>
             </Container>
         </Section >
     )
 }
 
-export default SkillsSection
+export default SamplesSection

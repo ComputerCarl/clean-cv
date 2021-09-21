@@ -7,22 +7,27 @@ import IconCard from '../IconCard/index'
 import { PaperPlane } from '@styled-icons/entypo'
 import svgRocket from '../../images/customer-service-advocate.svg'
 
-const Styled = styled.div`
-    text-align: right;
+const AuxGraphic = styled.div`
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    @media(max-width: 550px) {
-        flex-direction: column;
-    }
+    align-items: flex-end;
     img {
         display: unset;
-        filter: opacity(20%);
+        filter: opacity(30%);
         max-width: 150px;
-        max-height: 200px;
         @media(max-width: 700px) {
             display: none;
         }
+    }
+`
+
+
+const Styled = styled.div`
+    text-align: right;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    @media(max-width: 550px) {
+        flex-direction: column;
     }
     & > * {
         padding: 20px;
@@ -33,17 +38,17 @@ const cards = [
     {
         icon: PaperPlane,
         title: 'Well Equipped',
-        text: 'I wanna be like yooou-oo. I wanna walk like you, talk like you do!.'
+        text: 'My main workstation is equipped with modern hardware and software, including a high-resolution screen, 16GB of RAM, 1.2TB of SSD storage, development IDE, and graphics programs.'
     },
     {
         icon: PaperPlane,
-        title: 'Well Equipped',
-        text: 'I wanna be like yooou-oo. I wanna walk like you, talk like you do!.'
+        title: 'U.S. Based',
+        text: `A native English speaker, I am able to effectively communicate with English speakers around the world. Being based in the U.S. means I'm available when your customers need me.`
     },
     {
         icon: PaperPlane,
-        title: 'Well Equipped',
-        text: 'I wanna be like yooou-oo. I wanna walk like you, talk like you do!.'
+        title: 'Available Now',
+        text: `With minimal training, I can begin working on your project. I am also available immediately, so don't let this opportunity pass you by.`
     }
 ]
 
@@ -52,12 +57,18 @@ function BulletsSection() {
     return (
         <Section>
             <Container>
-                <MainHeader string="Hire Me" />
-                <br />
-                <Styled>
-                    <img src={svgRocket} alt="rocket ship" />
-                    {cards.map((el, i) => <IconCard {...el} />)}
-                </Styled>
+                <AuxGraphic>
+                    <div>
+                        <img src={svgRocket} alt="rocket ship" />
+                    </div>
+                    <div>
+                        <MainHeader string="Hire Me" />
+                        <br />
+                        <Styled>
+                            {cards.map((el, i) => <IconCard {...el} />)}
+                        </Styled>
+                    </div>
+                </AuxGraphic>
             </Container>
         </Section>
     )

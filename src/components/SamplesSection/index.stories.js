@@ -1,12 +1,12 @@
 import React from 'react';
-import SkillsSection from '.';
+import SamplesSection from '.';
 
 export default {
-    component: SkillsSection,
-    title: 'SkillsSection',
+    component: SamplesSection,
+    title: 'SamplesSection',
 }
 
-const Template = args => <SkillsSection {...args} />
+const Template = args => <SamplesSection {...args} />
 
 export const Default = Template.bind({});
 Default.args = {

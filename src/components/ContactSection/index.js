@@ -65,7 +65,7 @@ const Responsive = styled.div`
 `
 
 
-function SkillsSection() {
+function ContactSection() {
     return (
         <Section>
             <Container>
@@ -94,4 +94,4 @@ function SkillsSection() {
     )
 }
 
-export default SkillsSection
+export default ContactSection
