@@ -8,8 +8,8 @@ const StyledIcon = styled.div`
   ${StyledIconBase} {
     position: relative;
     color: ${color.light};
-    max-width: 32px;
-    max-height: 32px;
+    max-width: 24px;
+    max-height: 24px;
   }
 `
 const IconCircle = styled.div`
@@ -28,8 +28,6 @@ const Card = styled.div`
   justify-content: center;
   align-items: center;
 `
-
-
 
 
 function IconCard({ icon, title, text }) {

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
 
@@ -8,25 +8,33 @@ import SamplesSection from '../components/SamplesSection'
 import ContactSection from '../components/ContactSection'
 import BulletsSection from '../components/BulletsSection'
 import SiteFooter from '../components/SiteFooter'
+import ShareBox from '../components/ShareBox'
+import loadScript from '../utils/load-script'
 
-function index(props) {
+function Home(props) {
+    useEffect(() => {
+        loadScript('/js/matomo.js');
+        loadScript('/js/mautic.js'); // tracking
+    }, []);
+
     return (
         <Layout>
             <Seo title="Home Page" />
+            <ShareBox />
             <HeroSection />
             <SkillsSection />
             <BulletsSection />
             <SamplesSection />
-            <ContactSection  />
-            <a id="contact_section"  />
+            <ContactSection />
+            <a id="contact_section" />
             <SiteFooter />
         </Layout>
     )
 }
 
-index.propTypes = {
+Home.propTypes = {
 
 }
 
-export default index
+export default Home
 

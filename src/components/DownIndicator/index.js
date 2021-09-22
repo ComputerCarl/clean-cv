@@ -3,26 +3,25 @@ import { BoxArrowDown } from '@styled-icons/bootstrap'
 import { tada } from 'react-animations';
 import { StyledIconBase } from '@styled-icons/styled-icon'
 import styled, { keyframes } from 'styled-components'
-import { color } from '../../settings'
 
 var animation = keyframes`${tada}`
 
 const StyledDownIndicator = styled.div`
     width: 32px;
     height: 32px;
-    background-color: white;
     position: fixed;
     bottom: 10%;
     right: 50%;
     z-index: 99;
     border-radius: 32px;
-    line-height: 28px;
+    line-height: 30px;
+    background-color: powderblue;
     `
 
 const StyledIconWrapper = styled.div`
    ${StyledIconBase} {
-       color: ${color.lightest};
        width: 20px;
+       color: white;
        animation: ${animation} 1s 2 2;
     }
 `
@@ -45,7 +44,7 @@ function DownIndicator() {
         }, { passive: true });
     }, [])
 
-    if (!showArrow) return null;    
+    if (!showArrow) return null;
 
     return (
         <StyledDownIndicator>

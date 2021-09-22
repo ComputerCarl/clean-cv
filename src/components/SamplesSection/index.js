@@ -40,7 +40,7 @@ const projects = [
         title: 'Customized WooCommerce',
         text: `
         In this demo for a fictitious store, I used WordPress for the platform.
-        Real products were imported from AliExpress suppliers of China and inserted into WooCommerce which provides (disabled) e-commerce capabilities.
+        Real products were imported from AliExpress suppliers of China and inserted into WooCommerce, which provides (disabled) e-commerce capabilities.
         The free template was modified to add a hero section, affiliate links rather than post/page links, and aesthetic improvements.
         `,
         buttonLink: 'https://wpdemo.computercarl.com', buttonText: 'Visit Site'
