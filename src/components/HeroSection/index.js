@@ -8,8 +8,8 @@ import UnderWords from '../UnderWords/index';
 import Button from '../Button/index'
 import DownIndicator from '../DownIndicator/index'
 // import Helmet from 'react-helmet'
-import loadScript from '../../utils/load-script'
-import AnimatedCanvas from '../AnimatedCanvas/index'
+// import loadScript from '../../utils/load-script'
+// import AnimatedCanvas from '../AnimatedCanvas/index'
 import { color } from '../../settings'
 
 const Responsive = styled.div`
@@ -66,27 +66,25 @@ function HeroSection() {
 
     return (
         <Section fullHeight>
-            <AnimatedCanvas background={'aliceblue'} color={color.lightest}  >
-                <DownIndicator />
-                <Responsive>
-                    <div>
-                        <MainHeader string="Carl Mann" />
-                        <Styler color="#45b4e7">
-                            {'{ '}
-                        </Styler>
-                        <TypedHeader typeOptions={typeOptions} StylerComponent={Styler} />
-                        <Styler color="#45b4e7">
-                            {' }'}
-                        </Styler>
-                        <UnderWords />
-                        <div style={{ height: '30px' }} />
-                        <Button href="#contact_section" />
-                    </div>
-                    <div>
-                        <img src={svgCarlCanDoIt} alt="carl at computer" />
-                    </div>
-                </Responsive>
-            </AnimatedCanvas>
+            <DownIndicator />
+            <Responsive>
+                <div>
+                    <MainHeader string="Carl Mann" />
+                    <Styler color="#45b4e7">
+                        {'{ '}
+                    </Styler>
+                    <TypedHeader typeOptions={typeOptions} StylerComponent={Styler} />
+                    <Styler color="#45b4e7">
+                        {' }'}
+                    </Styler>
+                    <UnderWords />
+                    <div style={{ height: '30px' }} />
+                    <Button href="#contact_section" />
+                </div>
+                <div>
+                    <img src={svgCarlCanDoIt} alt="carl at computer" />
+                </div>
+            </Responsive>
         </Section>
     )
 }

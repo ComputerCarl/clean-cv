@@ -19,9 +19,9 @@ const A = styled.a`
     }
 `
 
-function Button({ text, href }) {
+function Button({ text, href, target }) {
     return (
-        <A href={href}>
+        <A href={href} target={target}>
             {text || 'Contact Me'}
         </A>
     )

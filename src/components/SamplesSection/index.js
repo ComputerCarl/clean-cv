@@ -5,6 +5,7 @@ import Section from '../Section'
 import { Container } from 'semantic-ui-react'
 import ProjectCard from '../ProjectCard/index'
 import jpgProjectDomfeed from '../../images/project-domfeed.jpg'
+import jpgProjectWoocommerce from '../../images/project-woocommerce.jpg'
 // import {StaticImage} from 'gatsby';
 
 const Styled = styled.section`
@@ -34,13 +35,15 @@ const projects = [
         buttonText: 'Visit Site'
     },
     {
-        image: jpgProjectDomfeed,
-        imageAlt: 'Laptop with React project',
-        title: 'Domain Name Finder',
+        image: jpgProjectWoocommerce,
+        imageAlt: 'WordPress Laptop',
+        title: 'Customized WooCommerce',
         text: `
-        This application, entirely designed and engineered by me, has several microservices, including: the (main) front end which pulls articles and products (premium domain names) during build time into a static-site-generator; a Mongo database; services (front and back) to import a humongous list of registered domains into a database; and external API calls for domain verification.
+        In this demo for a fictitious store, I used WordPress for the platform.
+        Real products were imported from AliExpress suppliers of China and inserted into WooCommerce which provides (disabled) e-commerce capabilities.
+        The free template was modified to add a hero section, affiliate links rather than post/page links, and aesthetic improvements.
         `,
-        buttonLink: 'https://domfeed.com', buttonText: 'Visit Site'
+        buttonLink: 'https://wpdemo.computercarl.com', buttonText: 'Visit Site'
     },
 
 ]

@@ -12,13 +12,13 @@ const AnimatedCanvas = ({ background, children, color }) => {
 
 
     const styles = {
-        position: 'fixed',
+        position: 'absolute',
         left: '0',
         top: '0',
-        width: '100%',
-        height: '100%',
+        width: '100vw',
+        height: '100vh',
         background: background || '#04BBD3',
-        zIndex: '100'
+        zIndex: '-1'
     }
 
 
