@@ -11,18 +11,29 @@ const Styled = styled.div`
     background-color: none;
     border: 1px solid lightgray;
     border-radius: 10px;
-    padding: 15px;
     img {
+        transition: all 250ms;
         max-width: 350px;
-        @media (max-width: 450px) {
-            max-width: 200px;
-        }
+
+    }
+    img:hover {
+        transform: scale(1.05);
+        filter: saturate(110%)
     }
     .button-space {
-        margin: 15px;
+        margin-top: 25px;
     }
-    & > * > * {
+    & > *  {
         margin: 20px;
+    }
+    & > * > *  {
+        margin: 10px;
+    }
+    @media (max-width: 450px) {
+        img {
+            max-width: 200px;
+            padding: unset;
+        }
     }
 `
 
@@ -30,7 +41,7 @@ function ProjectCard({ image, imageAlt, title, text, buttonLink, buttonText }) {
     return (
         <Styled>
             <div>
-                <div style={{ marginBottom: '-10px' }}>
+                <div style={{ marginBottom: '0' }}>
                     <img src={image} alt={imageAlt} />
                 </div>
                 <MonoTyped >
@@ -40,7 +51,7 @@ function ProjectCard({ image, imageAlt, title, text, buttonLink, buttonText }) {
                     {text}
                 </P>
             </div>
-            <div className="button-space">
+            <div>
                 <Button href={buttonLink} text={buttonText} target="_new" />
             </div>
         </Styled>

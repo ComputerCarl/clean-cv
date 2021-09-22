@@ -27,13 +27,18 @@ const Styled = styled.div`
     display: flex;
     align-items: flex-start;
     flex-direction: row;
-    @media(max-width: 550px) {
-        flex-direction: column;
-    }
     & > * {
         width: 33.33%;
         padding: 20px;
     }
+    @media(max-width: 550px) {
+        flex-direction: column;
+        & > * {
+            width: unset;
+            padding: 0px;
+        }
+    }
+
 `
 
 const cards = [
