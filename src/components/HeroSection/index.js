@@ -7,6 +7,10 @@ import svgCarlCanDoIt from '../../images/carl-at-computer.svg'
 import UnderWords from '../UnderWords/index';
 import Button from '../Button/index'
 import DownIndicator from '../DownIndicator/index'
+// import Helmet from 'react-helmet'
+import loadScript from '../../utils/load-script'
+import AnimatedCanvas from '../AnimatedCanvas/index'
+import { color } from '../../settings'
 
 const Responsive = styled.div`
     display: flex;
@@ -48,27 +52,41 @@ var typeOptions = {
 }
 
 function HeroSection() {
+    // useEffect(() => {
+    //     (async () => {
+    //         await loadScript('/js/sketch.js');
+    //         setTimeout(() => {
+    //             console.log({ sketch: !!window.Sketch });
+    //         }, 1000);
+    //     })()
+    //     return (() => {
+    //         window.Sketch = null;
+    //     })
+    // }, [])
+
     return (
         <Section fullHeight>
-            <DownIndicator />
-            <Responsive>
-                <div>
-                    <MainHeader string="Carl Mann" />
-                    <Styler color="#45b4e7">
-                        {'{ '}
-                    </Styler>
-                    <TypedHeader typeOptions={typeOptions} StylerComponent={Styler} />
-                    <Styler color="#45b4e7">
-                        {' }'}
-                    </Styler>
-                    <UnderWords />
-                    <div style={{ height: '30px' }} />
-                    <Button href="#contact_section" />
-                </div>
-                <div>
-                    <img src={svgCarlCanDoIt} alt="carl at computer" />
-                </div>
-            </Responsive>
+            <AnimatedCanvas background={'aliceblue'} color={color.lightest}  >
+                <DownIndicator />
+                <Responsive>
+                    <div>
+                        <MainHeader string="Carl Mann" />
+                        <Styler color="#45b4e7">
+                            {'{ '}
+                        </Styler>
+                        <TypedHeader typeOptions={typeOptions} StylerComponent={Styler} />
+                        <Styler color="#45b4e7">
+                            {' }'}
+                        </Styler>
+                        <UnderWords />
+                        <div style={{ height: '30px' }} />
+                        <Button href="#contact_section" />
+                    </div>
+                    <div>
+                        <img src={svgCarlCanDoIt} alt="carl at computer" />
+                    </div>
+                </Responsive>
+            </AnimatedCanvas>
         </Section>
     )
 }
