@@ -4,7 +4,9 @@ import { P, MonoTyped } from '../Stylers/index'
 import Button from '../Button/index'
 
 const Styled = styled.div`
-    justify-content: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     background-color: none;
     border: 1px solid lightgray;
@@ -19,23 +21,25 @@ const Styled = styled.div`
     .button-space {
         margin: 15px;
     }
-    & > * {
-        margin: 15px;
+    & > * > * {
+        margin: 20px;
     }
 `
 
 function ProjectCard({ image, imageAlt, title, text, buttonLink, buttonText }) {
     return (
         <Styled>
-            <div style={{ marginBottom: '-10px' }}>
-                <img src={image} alt={imageAlt} />
+            <div>
+                <div style={{ marginBottom: '-10px' }}>
+                    <img src={image} alt={imageAlt} />
+                </div>
+                <MonoTyped >
+                    {title}
+                </MonoTyped>
+                <P>
+                    {text}
+                </P>
             </div>
-            <MonoTyped >
-                {title}
-            </MonoTyped>
-            <P>
-                {text}
-            </P>
             <div className="button-space">
                 <Button href={buttonLink} text={buttonText} target="_new" />
             </div>
