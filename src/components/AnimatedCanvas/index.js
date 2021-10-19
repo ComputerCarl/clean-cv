@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import './style.css';
 import floatingXo from './floating-xo'
 
-const AnimatedCanvas = ({ background, children, color }) => {
+const AnimatedCanvas = ({ background, children, color, altCanvasContent }) => {
     const aniCanvas = useRef(null);
 
     useEffect(() => {
@@ -22,9 +22,12 @@ const AnimatedCanvas = ({ background, children, color }) => {
     }
 
 
-    return (<canvas style={styles} ref={aniCanvas} id={background ? "canvas-bg" : "canvas-fg"} >
+    return (<>
+        <canvas style={styles} ref={aniCanvas} id={background ? "canvas-bg" : "canvas-fg"} >
+            {altCanvasContent}
+        </canvas>
         {children}
-    </ canvas>)
+    </>)
 }
 
 export default AnimatedCanvas;

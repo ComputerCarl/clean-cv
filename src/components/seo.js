@@ -69,7 +69,9 @@ function Seo({ description, lang, meta, title }) {
                     content: metaDescription,
                 },
             ].concat(meta)}
-        />
+        >
+            <script async defer data-website-id="bec7614c-ff0e-49e1-9d22-f5092b19a5d4" src="https://umami.app.computercarl.com/umami.js"></script>
+        </Helmet>
     )
 }
 

@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components'
 import MainHeader from '../MainHeader'
 import { Container } from 'semantic-ui-react'
 import Section from '../Section'
 import svgCactus from '../../images/hire-this-man.svg'
-import { Email, Phone, LocationPin, Link } from '@styled-icons/entypo'
+import { Email, Phone, LocationPin, Link, Attachment } from '@styled-icons/entypo'
 import { Skype, Github } from '@styled-icons/entypo-social'
 import { color } from '../../settings'
 import { StyledIconBase } from '@styled-icons/styled-icon'
@@ -16,6 +16,7 @@ var contactLinks = [
     { link: 'skype:hamptonit?chat', label: 'hamptonit', icon: Skype },
     { link: 'https://github.com/ComputerCarl', label: 'ComputerCarl', icon: Github },
     { link: 'https://computercarl.com', label: 'ComputerCarl.com', icon: Link },
+    { link: 'https://computercarl.com/carl-mann-technology-generalist-resume.pdf', label: 'résumé', icon: Attachment },
 ]
 
 // var Icon = ({ icon }) => React.createElement(icon);
@@ -66,6 +67,12 @@ const Responsive = styled.div`
 
 
 function ContactSection() {
+    const [loadedContacts, loadContacts] = useState([]);
+
+    useEffect(() => {
+        loadContacts(contactLinks)
+    }, [])
+
     return (
         <Section>
             <Container>
@@ -74,11 +81,11 @@ function ContactSection() {
                     <br />
                     <Responsive>
                         <IconStyleWrapper>
-                            {contactLinks.map((el, i) => {
+                            {loadedContacts && loadedContacts.map((el, i) => {
                                 var Icon = el.icon;
                                 return (<div key={i}>
                                     <Icon />
-                                    <a href={el.link}>
+                                    <a href={el.link} target="_new">
                                         <span>{el.label}</span>
                                     </a>
                                 </div>)

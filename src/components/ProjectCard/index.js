@@ -14,7 +14,7 @@ const Styled = styled.div`
     img {
         transition: all 250ms;
         max-width: 350px;
-
+        cursor: pointer;
     }
     img:hover {
         transform: scale(1.05);
@@ -42,7 +42,9 @@ function ProjectCard({ image, imageAlt, title, text, buttonLink, buttonText }) {
         <Styled>
             <div>
                 <div style={{ marginBottom: '0' }}>
-                    <img src={image} alt={imageAlt} />
+                    <a href={buttonLink} target="_new">
+                        <img src={image} alt={imageAlt} />
+                    </a>
                 </div>
                 <MonoTyped >
                     {title}
