@@ -19,7 +19,6 @@ function Home(props) {
 
     return (
         <Layout>
-            <img src="https://crm.upchunk.com/mtracking.gif" alt="pixel" />
             <Seo title="Home Page" />
             <ShareBox />
             <HeroSection />
@@ -28,6 +27,7 @@ function Home(props) {
             <SamplesSection />
             <ContactSection />
             <a id="contact_section" />
+            <img style={{ position: 'absolute', zIndex: 1 }} src="https://crm.upchunk.com/mtracking.gif" alt="pixel" />
             <SiteFooter />
         </Layout>
     )
