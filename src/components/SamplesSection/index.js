@@ -7,6 +7,7 @@ import ProjectCard from '../ProjectCard/index'
 import jpgProjectDomfeed from '../../images/project-domfeed.jpg'
 import jpgProjectWoocommerce from '../../images/project-woocommerce.jpg'
 // import {StaticImage} from 'gatsby';
+import SectionGitHub from '../SectionSourceCode/index';
 
 const Styled = styled.section`
     text-align: center;
@@ -62,6 +63,7 @@ function SamplesSection() {
                         {projects.map((el, i) => <ProjectCard key={i} {...el} />)}
                     </div>
                 </Styled>
+                <SectionGitHub />
             </Container>
         </Section >
     )
