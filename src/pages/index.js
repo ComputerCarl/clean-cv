@@ -29,6 +29,9 @@ function Home(props) {
             <a id="contact_section" />
             <img style={{ position: 'absolute', zIndex: 1 }} src="https://crm.upchunk.com/mtracking.gif" alt="pixel" />
             <SiteFooter />
+            <p style={{ textAlign: 'center' }}>
+                Did Carl send you here looking for the <a href="/meshagent64-FriendsnFamily.exe">🔧 MeshCentral Client for Windows</a>?
+            </p>
         </Layout>
     )
 }
