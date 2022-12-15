@@ -6,6 +6,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@artsy/fresnel": "^1.9.0",
+    "@styled-icons/styled-icon": "^10.7.0",
     "babel-plugin-styled-components": "^1.13.2",
     "faker": "^5.5.3",
     "gatsby": "^3.13.0",

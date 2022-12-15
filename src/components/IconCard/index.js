@@ -1,12 +1,13 @@
-import React from 'react'
-import styled from 'styled-components'
-import { StyledIconBase } from '@styled-icons/styled-icon'
-import { color } from '../../settings'
-import { SubHeader, P } from '../Stylers/index'
+import React from "react"
+import styled from "styled-components"
+import { StyledIconBase } from "@styled-icons/styled-icon"
+import { color } from "../../settings"
+import { SubHeader, P } from "../Stylers/index"
 
 const StyledIcon = styled.div`
   ${StyledIconBase} {
-    position: relative;
+    position: absolute;
+    transform: translate(-50%, -50%);
     color: ${color.light};
     max-width: 24px;
     max-height: 24px;
@@ -28,7 +29,6 @@ const Card = styled.div`
   justify-content: center;
   align-items: center;
 `
-
 
 function IconCard({ icon, title, text }) {
   var Icon = icon;
