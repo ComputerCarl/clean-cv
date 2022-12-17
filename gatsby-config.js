@@ -23,7 +23,14 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
-      },
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/src/markdown`,
+      }
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -35,7 +42,8 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/paper-plane-1.svg`, // This path is relative to the root of the site.
-      },
+      }
     },
+    `gatsby-transformer-remark`,
   ],
 }

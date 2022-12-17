@@ -45,17 +45,17 @@ const cards = [
     {
         icon: Cup,
         title: 'Well Equipped',
-        text: 'My main workstation is equipped with modern hardware and software, including a high-resolution screen, 16GB of RAM, 1.2TB of SSD storage, development IDE, and graphics programs.'
+        text: 'My main workstation is equipped with modern hardware and software, including a dual screens, 16GB of RAM, 1.2TB of SSD storage, development IDE, and graphics programs.'
     },
     {
         icon: ChatText,
-        title: 'U.S. Based',
-        text: `A native English speaker, I am able to effectively communicate with English speakers around the world. Being based in the U.S. means I'm available when your customers need me.`
+        title: 'Native English Speaker',
+        text: `I am able to effectively communicate with English speakers around the world. Having been born and raised in New York, I can even argue that only people from outside New York speak with accents. :-)`
     },
     {
         icon: EmojiSunglasses,
         title: 'Soft Skills',
-        text: `In addition to the many hard skills listed previously, I also have many soft skills, which make me a good candidate for many positions. Some of these skills include: flexibility, empathy, determination, and discretion.`
+        text: `In addition to a myriad of hard skills, I also have many soft skills, which make me a good candidate for many customer-facing positions: flexibility, empathy, determination, and discretion.`
     }
 ]
 
