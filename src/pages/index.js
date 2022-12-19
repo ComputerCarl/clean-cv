@@ -11,6 +11,7 @@ import SiteFooter from "../components/SiteFooter"
 import ShareBox from "../components/ShareBox"
 import loadScript from "../utils/load-script"
 
+
 function Home({ data }) {
   useEffect(() => {
     loadScript("/js/matomo.js")
@@ -19,12 +20,11 @@ function Home({ data }) {
 
   const articles = data.allMarkdownRemark.nodes
 
-  console.log(articles)
   return (
     <Layout>
       <Seo title="Home Page" />
       <ShareBox />
-      <HeroSection />
+      <HeroSection fullHeight />
       <SkillsSection />
       <BulletsSection />
       <SamplesSection articles={articles} />
@@ -60,6 +60,7 @@ export const query = graphql`
         excerpt
         frontmatter {
           title
+          slug
           featuredImage
           featuredAltText
         }

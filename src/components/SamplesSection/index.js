@@ -59,18 +59,19 @@ function SamplesSection({ articles }) {
           <br />
           <div className="projects-stacking">
             {projects.slice(0, 2).map((el, i) => (
-              <ProjectCard key={i} {...el} />
+              <ProjectCard key={el.imageAlt} {...el} />
             ))}
           </div>
           <div className="projects-stacking">
             {articles.map((el, i) => (
               <ProjectCard
-                key={i}
+                key={el.id}
                 title={el.frontmatter.title}
                 image={el.frontmatter.featuredImage}
                 imageAlt={el.frontmatter.featuredAltText}
-                excerpt={el.excerpt}
-                text={el.html}
+                text={el.frontmatter.description ||  el.excerpt}
+                buttonLink={el.frontmatter.slug}
+                buttonText="Read More"
               />
             ))}
           </div>

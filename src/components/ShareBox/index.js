@@ -68,7 +68,7 @@ export default () => {
 
       <div className="share-items">
         {shareItems.map((item, i) => (
-          <a href={item.link} target={item.newWindow ? '_new' : null}>
+          <a href={item.link} key={item.label} target={item.newWindow ? '_new' : null}>
             <img
               key={i}
               src={item.icon.default}
