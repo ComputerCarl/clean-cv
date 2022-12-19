@@ -23,14 +23,10 @@ const Responsive = styled.div`
     width: 200px;
   }
   @media (min-width: 600px) {
-    /* & > * {
-            width: 50%;
-        } */
-    padding: 25px;
     flex-direction: row;
     img {
       padding-top: 0;
-      width: 375px;
+      width: ${({ fullHeight }) => (fullHeight ? "375px" : "150px")};
     }
   }
 `
@@ -48,7 +44,7 @@ var typeOptions = {
   strings: ["web developer", "customer support agent", "technology generalist"],
 }
 
-function HeroSection() {
+function HeroSection({ fullHeight }) {
   // useEffect(() => {
   //     (async () => {
   //         await loadScript('/js/sketch.js');
@@ -60,19 +56,24 @@ function HeroSection() {
   //         window.Sketch = null;
   //     })
   // }, [])
-
+  console.log({ fullHeight })
   return (
-    <Section fullHeight>
+    <Section fullHeight={fullHeight}>
       <DownIndicator />
-      <Responsive>
+      <Responsive fullHeight={fullHeight}>
         <div>
           <MainHeader string="Carl Mann" />
           <Styler color="#45b4e7">{"{ "}</Styler>
           <TypedHeader typeOptions={typeOptions} StylerComponent={Styler} />
           <Styler color="#45b4e7">{" }"}</Styler>
-          <UnderWords />
-          <div style={{ height: "30px" }} />
-          <Button text="Contact Me" href="#contact_section" />
+          {fullHeight && (
+            <>
+              <UnderWords />
+              <div style={{ marginTop: "30px" }}>
+                <Button href="#contact_section" text="Contact Me" />
+              </div>
+            </>
+          )}
         </div>
         <div>
           <img src={svgCarlCanDoIt} alt="carl at computer" />
