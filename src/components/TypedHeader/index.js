@@ -21,7 +21,7 @@ const TypedStrings = ({ typeOptions, StylerComponent }) => {
         return () => {
             typed.destroy();
         };
-    }, []);
+    }, [isShowCursor, typeOptions]);
 
 
     if (StylerComponent) return (

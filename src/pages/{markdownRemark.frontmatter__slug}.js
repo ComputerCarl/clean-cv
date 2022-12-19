@@ -2,10 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Seo from "../components/seo"
 import HeroSection from "../components/HeroSection"
-
-import { StaticImage } from "gatsby-plugin-image"
 import ContactSection from "../components/ContactSection"
-import BulletsSection from "../components/BulletsSection"
 import SiteFooter from "../components/SiteFooter"
 import ShareBox from "../components/ShareBox"
 import Layout from "../components/layout"
@@ -24,7 +21,7 @@ export default function Article({
   data: {
     markdownRemark: {
       html,
-      frontmatter: { title, tags, featuredImage, featuredAltText },
+      frontmatter: { title, featuredImage, featuredAltText },
     },
   },
 }) {

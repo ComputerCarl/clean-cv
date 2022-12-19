@@ -20,10 +20,6 @@ const Note = styled.section`
     }
 `
 
-const VRow = styled(Row)`
-    align-items: center;
-`
-
 const SectionSourceCode = props => {
     return (
         <Note>

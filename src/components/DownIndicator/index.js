@@ -42,7 +42,7 @@ function DownIndicator() {
             setShowArrow(false);
             clearTimeout(timedEvt);
         }, { passive: true });
-    }, [])
+    }, [disableArrow])
 
     if (!showArrow) return null;
 

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { debounce } from 'lodash';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import imgScrollUp from './scroll-up.svg'
 
@@ -34,7 +33,5 @@ const ScrollTo = () => {
         onClick={() => window.scrollTo(0, 0)}
     />);
 };
-
-ScrollTo.propTypes = {};
 
 export default ScrollTo;

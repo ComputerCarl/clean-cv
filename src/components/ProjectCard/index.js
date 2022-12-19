@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import { P, MonoTyped } from '../Stylers/index'
 import Button from '../Button/index'
-import { StaticImage } from "gatsby-plugin-image"
 
 const Styled = styled.div`
   justify-content: space-between;

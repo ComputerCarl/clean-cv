@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import Section from "../Section"
 import MainHeader from "../MainHeader"
-import styled, { keyframes } from "styled-components"
+import styled from "styled-components"
 import TypedHeader from "../TypedHeader/index"
 import svgCarlCanDoIt from "../../images/carl-at-computer.svg"
 import UnderWords from "../UnderWords/index"
@@ -45,17 +45,6 @@ var typeOptions = {
 }
 
 function HeroSection({ fullHeight }) {
-  // useEffect(() => {
-  //     (async () => {
-  //         await loadScript('/js/sketch.js');
-  //         setTimeout(() => {
-  //             console.log({ sketch: !!window.Sketch });
-  //         }, 1000);
-  //     })()
-  //     return (() => {
-  //         window.Sketch = null;
-  //     })
-  // }, [])
   console.log({ fullHeight })
   return (
     <Section fullHeight={fullHeight}>
