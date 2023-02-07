@@ -8,6 +8,7 @@ import jpgProjectDomfeed from "../../images/project-domfeed.jpg"
 import jpgProjectWoocommerce from "../../images/project-woocommerce.jpg"
 // import {StaticImage} from 'gatsby';
 import SectionGitHub from "../SectionSourceCode/index"
+import { P } from "../Stylers/index"
 
 const Styled = styled.section`
   text-align: center;
@@ -15,12 +16,18 @@ const Styled = styled.section`
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    @media (max-width: 800px) {
-      flex-direction: column;
-    }
     & > * {
       margin: 20px;
       flex: 1;
+    }
+  }
+  @media (max-width: 800px) {
+    div.projects-stacking {
+      flex-direction: column;
+      & > * {
+        margin: 20px 0;
+        flex: 1;
+      }
     }
   }
 `
@@ -56,6 +63,25 @@ function SamplesSection({ articles }) {
       <Container>
         <Styled>
           <MainHeader string="Project Samples" override />
+          <div
+            style={{
+              textAlign: "center",
+              display: "inline-block",
+              maxWidth: "700px",
+            }}
+          >
+            <P>
+              React JS and Node JS are my forte, but I have also developed
+              projects in Python, Classic ASP, Bubble, and dabbled in PHP. I'd
+              link to think that presented with a need and a bit of time, I
+              could become proficient in other languages and platforms as well.
+            </P>
+            <P>
+              I have included a small sample of some of the projects I have
+              developed or contributed in, to showcase my flexibility in
+              development.
+            </P>
+          </div>
           <br />
           <div className="projects-stacking">
             {projects.slice(0, 2).map((el, i) => (
@@ -69,7 +95,7 @@ function SamplesSection({ articles }) {
                 title={el.frontmatter.title}
                 image={el.frontmatter.featuredImage}
                 imageAlt={el.frontmatter.featuredAltText}
-                text={el.frontmatter.description ||  el.excerpt}
+                text={el.frontmatter.description || el.excerpt}
                 buttonLink={el.frontmatter.slug}
                 buttonText="Read More"
               />

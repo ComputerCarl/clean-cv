@@ -25,9 +25,9 @@ function Home({ data }) {
       <Seo title="Home Page" />
       <ShareBox />
       <HeroSection fullHeight />
-      <SkillsSection />
-      <BulletsSection />
       <SamplesSection articles={articles} />
+      <BulletsSection />
+      <SkillsSection />
       <ContactSection />
       <a id="contact_section" />
       <img

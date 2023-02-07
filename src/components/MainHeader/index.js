@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 
 const Styled = styled.div`
     font-size: 2.2em;
+    line-height: 1.25em;
     &&& {
         margin-top: 20px;
         margin-bottom: 10px;
