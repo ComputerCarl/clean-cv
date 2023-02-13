@@ -5,12 +5,12 @@ module.exports = {
     author: `@gotprops`,
     siteUrl: `https://computercarl.com/`,
     color: {
-      darkest: '#34374a',
-      dark: '#595f7c',
-      medium: '#777ba0',
-      light: '#8892b5',
-      lightest: '#a4afc5'
-    }
+      darkest: "#34374a",
+      dark: "#595f7c",
+      medium: "#777ba0",
+      light: "#8892b5",
+      lightest: "#a4afc5",
+    },
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -23,14 +23,14 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
-      }
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `content`,
         path: `${__dirname}/src/markdown`,
-      }
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -42,8 +42,9 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/paper-plane-1.svg`, // This path is relative to the root of the site.
-      }
+      },
     },
     `gatsby-transformer-remark`,
+    "gatsby-plugin-webpack-bundle-analyser-v2",
   ],
 }

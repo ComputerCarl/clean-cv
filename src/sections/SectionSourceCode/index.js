@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {  Row, Col } from '../Formatters';
+import {  Row, Col } from '../../components/Formatters';
 
 import svgGithubMap from './computercarl-github-map.svg';
 

@@ -6,10 +6,11 @@
   "author": "Carl Mann <carl@computercarl.com>",
   "dependencies": {
     "@artsy/fresnel": "^1.9.0",
+    "@storybook/addon-postcss": "^2.0.0",
     "@styled-icons/styled-icon": "^10.7.0",
     "babel-plugin-styled-components": "^1.13.2",
     "faker": "^5.5.3",
-    "gatsby": "^3.13.0",
+    "gatsby": "^4.25.4",
     "gatsby-plugin-fresnel": "^1.0.1",
     "gatsby-plugin-gatsby-cloud": "^2.11.0",
     "gatsby-plugin-image": "^1.15.0",
@@ -22,6 +23,7 @@
     "gatsby-transformer-remark": "^5.25.0",
     "gatsby-transformer-sharp": "^3.15.0",
     "image-size": "^1.0.0",
+    "postcss": "^8.4.21",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-animations": "^1.0.0",
@@ -44,6 +46,7 @@
     "@storybook/manager-webpack5": "^6.4.0-alpha.33",
     "@storybook/react": "^6.3.8",
     "babel-loader": "^8.2.2",
+    "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.30",
     "jest": "^27.1.0",
     "prettier": "2.3.2"
   },

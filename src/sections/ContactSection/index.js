@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components'
-import MainHeader from '../MainHeader'
+import MainHeader from '../../components/MainHeader'
 import { Container } from 'semantic-ui-react'
-import Section from '../Section'
+import Section from '../../components/Section'
 import svgCactus from '../../images/hire-this-man.svg'
 import { Email, Phone, LocationPin, Link, Attachment } from '@styled-icons/entypo'
 import { Skype, Github } from '@styled-icons/entypo-social'

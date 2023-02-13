@@ -2,15 +2,47 @@ import React, { useEffect } from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { graphql } from "gatsby"
-import HeroSection from "../components/HeroSection"
-import SkillsSection from "../components/SkillsSection"
-import SamplesSection from "../components/SamplesSection"
-import ContactSection from "../components/ContactSection"
-import BulletsSection from "../components/BulletsSection"
-import SiteFooter from "../components/SiteFooter"
+import HeroSection from "../sections/HeroSection"
+import SkillsSection from "../sections/SkillsSection"
+import SamplesSection from "../sections/SamplesSection"
+import ContactSection from "../sections/ContactSection"
+import BulletsSection from "../sections/BulletsSection"
+import SiteFooter from "../sections/SiteFooter"
+import Parallax from "../components/Parallax"
 import ShareBox from "../components/ShareBox"
 import loadScript from "../utils/load-script"
+import neurons from "../images/bg4.jpg"
 
+import styled from "styled-components"
+
+const ParallaxChoose = styled.div`
+  & {
+    text-align: center;
+    font-size: 2em;
+    line-height: 1.4em;
+    letter-spacing: 0em;
+    font-weight: 300;
+    font-style: normal;
+    text-transform: uppercase;
+    color: ghostwhite;
+    font-family: "Open Sans";
+  }
+  .author {
+    font-size: .75em;
+  }
+`
+
+const ParallaxQuote = () => (
+  <section>
+    <Parallax bgImage={neurons}>
+      <ParallaxChoose>
+        “Choose a job that you love, and you will never have to work a day in
+        your life.”
+        <div class="author">– Confucius</div>
+      </ParallaxChoose>
+    </Parallax>
+  </section>
+)
 
 function Home({ data }) {
   useEffect(() => {
@@ -25,6 +57,7 @@ function Home({ data }) {
       <Seo title="Home Page" />
       <ShareBox />
       <HeroSection fullHeight />
+      <ParallaxQuote />
       <SamplesSection articles={articles} />
       <BulletsSection />
       <SkillsSection />
@@ -36,13 +69,6 @@ function Home({ data }) {
         alt="pixel"
       />
       <SiteFooter />
-      <p style={{ textAlign: "center" }}>
-        Did Carl send you here looking for the{" "}
-        <a href="/meshagent64-FriendsnFamily.exe">
-          🔧 MeshCentral Client for Windows
-        </a>
-        ?
-      </p>
     </Layout>
   )
 }

@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { MonoTyped } from '../Stylers/index'
 
 const StyledWord = styled.div`
-    div {
+    button {
         margin: 10px;
         border: 1px solid whitesmoke;
         padding: 3px;
@@ -30,11 +30,11 @@ function CategoryList({ handleMouseEnter, handleMouseLeave, hoveredCategories })
         <MonoTyped>
             <StyledWord>
                 {categories.map((el, i) =>
-                    <div key={i}
+                    <button key={i}
                         className={(hoveredCategories.indexOf(el.toLowerCase()) > -1) ? 'hovered' : ''}
                         onMouseEnter={() => handleMouseEnter(el)}
                         onMouseLeave={() => handleMouseLeave()}
-                    >{el}</div>
+                    >{el}</button>
                 )}
             </StyledWord>
         </MonoTyped>

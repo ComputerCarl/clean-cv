@@ -1,12 +1,12 @@
 import React from "react"
-import Section from "../Section"
-import MainHeader from "../MainHeader"
+import Section from "../../components/Section"
+import MainHeader from "../../components/MainHeader"
 import styled from "styled-components"
-import TypedHeader from "../TypedHeader/index"
+import TypedHeader from "../../components/TypedHeader/index"
 import svgCarlCanDoIt from "../../images/carl-at-computer.svg"
-import UnderWords from "../UnderWords/index"
-import Button from "../Button/index"
-import DownIndicator from "../DownIndicator/index"
+import UnderWords from "../../components/UnderWords/index"
+import Button from "../../components/Button/index"
+import DownIndicator from "../../components/DownIndicator/index"
 // import Helmet from 'react-helmet'
 // import loadScript from '../../utils/load-script'
 // import AnimatedCanvas from '../AnimatedCanvas/index'
@@ -49,7 +49,7 @@ function HeroSection({ fullHeight }) {
   return (
     <Section fullHeight={fullHeight}>
       <DownIndicator />
-      <Responsive fullHeight={fullHeight}>
+      <Responsive fullHeight>
         <div>
           <MainHeader string="Carl Mann" />
           <Styler color="#45b4e7">{"{ "}</Styler>
@@ -65,7 +65,7 @@ function HeroSection({ fullHeight }) {
           )}
         </div>
         <div>
-          <img src={svgCarlCanDoIt} alt="carl at computer" />
+          <img  src={svgCarlCanDoIt} alt="carl at computer" />
         </div>
       </Responsive>
     </Section>

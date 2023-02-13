@@ -1,12 +1,12 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import MainHeader from "../MainHeader"
-import CategoryList from "../CategoryList"
+import MainHeader from "../../components/MainHeader"
+import CategoryList from "../../components/CategoryList"
 import { Container } from "semantic-ui-react"
 import { color } from "../../settings"
-import ImageDump from "../ImageDump"
-import Section from "../Section"
-import { P } from "../Stylers/index"
+import ImageDump from "../../components/ImageDump"
+import Section from "../../components/Section"
+import { P } from "../../components/Stylers/index"
 
 const Styled = styled.section`
   text-align: center;
@@ -21,7 +21,7 @@ const Styled = styled.section`
     //   flex-direction: column;
     // }
     div#icons {
-        display: none;
+      display: none;
     }
   }
 `

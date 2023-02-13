@@ -8,7 +8,6 @@ const Styled = styled.section`
   align-items: center;
   background-color: ${({ altColor }) => (altColor ? "white" : "aliceblue")};
   height: ${({ fullHeight }) => (fullHeight ? "100vh" : "unset")};
-  width: 100%;
   text-align: center;
   padding: 30px;
   @media (max-width: 400px) {
@@ -16,7 +15,7 @@ const Styled = styled.section`
   }
 `
 
-function Section({ children, altColor, fullHeight }) {
+function Section({ children, altColor, fullHeight, container }) {
   return (
     <Styled fullHeight={fullHeight} altColor={altColor}>
       <div style={{ width: "100%" }}>{children}</div>

@@ -1,14 +1,14 @@
 import React from "react"
 import styled from "styled-components"
-import MainHeader from "../MainHeader"
-import Section from "../Section"
+import MainHeader from "../../components/MainHeader"
+import Section from "../../components/Section"
 import { Container } from "semantic-ui-react"
-import ProjectCard from "../ProjectCard/index"
+import ProjectCard from "../../components/ProjectCard/index"
 import jpgProjectDomfeed from "../../images/project-domfeed.jpg"
 import jpgProjectWoocommerce from "../../images/project-woocommerce.jpg"
 // import {StaticImage} from 'gatsby';
 import SectionGitHub from "../SectionSourceCode/index"
-import { P } from "../Stylers/index"
+import { P } from "../../components/Stylers/index"
 
 const Styled = styled.section`
   text-align: center;

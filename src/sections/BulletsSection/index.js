@@ -1,10 +1,9 @@
 import React from 'react'
-import Section from '../Section/index'
+import Section from '../../components/Section/index'
 import { Container } from 'semantic-ui-react'
-import MainHeader from '../MainHeader/index'
+import MainHeader from '../../components/MainHeader/index'
 import styled from 'styled-components'
-import IconCard from '../IconCard/index'
-// import { UserVoice, UserCheck, MouseAlt } from '@styled-icons/boxicons'
+import IconCard from '../../components/IconCard/index'
 import { Cup , ChatText, EmojiSunglasses } from '@styled-icons/bootstrap'
 import svgRocket from '../../images/customer-service-advocate.svg'
 
