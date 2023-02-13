@@ -2,11 +2,10 @@ import React from "react"
 import styled from "styled-components"
 import MainHeader from "../../components/MainHeader"
 import Section from "../../components/Section"
-import { Container } from "semantic-ui-react"
+import { Contained } from "../../components/Formatters"
 import ProjectCard from "../../components/ProjectCard/index"
 import jpgProjectDomfeed from "../../images/project-domfeed.jpg"
 import jpgProjectWoocommerce from "../../images/project-woocommerce.jpg"
-// import {StaticImage} from 'gatsby';
 import SectionGitHub from "../SectionSourceCode/index"
 import { P } from "../../components/Stylers/index"
 
@@ -60,7 +59,7 @@ const projects = [
 function SamplesSection({ articles }) {
   return (
     <Section altColor>
-      <Container>
+      <Contained>
         <Styled>
           <MainHeader string="Project Samples" override />
           <div
@@ -103,7 +102,7 @@ function SamplesSection({ articles }) {
           </div>
         </Styled>
         <SectionGitHub />
-      </Container>
+      </Contained>
     </Section>
   )
 }

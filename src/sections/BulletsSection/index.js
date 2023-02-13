@@ -1,6 +1,6 @@
 import React from 'react'
 import Section from '../../components/Section/index'
-import { Container } from 'semantic-ui-react'
+import {Contained} from '../../components/Formatters'
 import MainHeader from '../../components/MainHeader/index'
 import styled from 'styled-components'
 import IconCard from '../../components/IconCard/index'
@@ -62,7 +62,7 @@ const cards = [
 function BulletsSection() {
     return (
         <Section>
-            <Container>
+            <Contained>
                 <AuxGraphic>
                     <div>
                         <img src={svgRocket} alt="rocket ship" />
@@ -75,7 +75,7 @@ function BulletsSection() {
                         </Styled>
                     </div>
                 </AuxGraphic>
-            </Container>
+            </Contained>
         </Section>
     )
 }

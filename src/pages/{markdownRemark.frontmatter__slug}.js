@@ -6,7 +6,7 @@ import ContactSection from "../sections/ContactSection"
 import SiteFooter from "../sections/SiteFooter"
 import ShareBox from "../components/ShareBox"
 import Layout from "../components/layout"
-import { Container } from "semantic-ui-react"
+import { Contained } from "../components/Formatters"
 import styled from "styled-components"
 
 const Styled = styled.div`
@@ -30,13 +30,13 @@ export default function Article({
       <Seo title="Home Page" />
       <ShareBox />
       <HeroSection />
-      <Container>
+      <Contained>
         <Styled>
           <h1>{title}</h1>
           <img src={featuredImage} alt={featuredAltText} />
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </Styled>
-      </Container>
+      </Contained>
 
       <ContactSection />
       <a id="contact_section" />

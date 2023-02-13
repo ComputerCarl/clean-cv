@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import MainHeader from "../../components/MainHeader"
 import CategoryList from "../../components/CategoryList"
-import { Container } from "semantic-ui-react"
+import { Contained } from "../../components/Formatters"
 import { color } from "../../settings"
 import ImageDump from "../../components/ImageDump"
 import Section from "../../components/Section"
@@ -32,7 +32,7 @@ function SkillsSection() {
 
   return (
     <Section altColor>
-      <Container>
+      <Contained>
         <Styled>
           <MainHeader string="Diverse Skill Set" override />
           <div style={{ textAlign: "center", display: "inline-block" }}>
@@ -64,7 +64,7 @@ function SkillsSection() {
             </div>
           </div>
         </Styled>
-      </Container>
+      </Contained>
     </Section>
   )
 }

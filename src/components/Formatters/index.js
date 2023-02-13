@@ -1,8 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 
-export const Container = ({ children }) => <div>{children}</div>
-
 export const Row = styled.div`
   ${({ align, justify }) => `
     // border: 1px solid lightgrey;
@@ -48,7 +46,9 @@ export const Fully = styled.div`
 
 export const Contained = styled.div`
   padding: 10px;
-  max-width: 1000px;
   position: relative;
   margin: 0 auto;
+  @media (min-width: 1000px) {
+    width: 1000px;
+  }
 `

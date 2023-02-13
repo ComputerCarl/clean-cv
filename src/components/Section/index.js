@@ -15,7 +15,7 @@ const Styled = styled.section`
   }
 `
 
-function Section({ children, altColor, fullHeight, container }) {
+function Section({ children, altColor, fullHeight }) {
   return (
     <Styled fullHeight={fullHeight} altColor={altColor}>
       <div style={{ width: "100%" }}>{children}</div>
