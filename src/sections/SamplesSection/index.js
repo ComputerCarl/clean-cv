@@ -72,12 +72,12 @@ function SamplesSection({ articles }) {
             <P>
               React JS and Node JS are my forte, but I have also developed
               projects in Python, Classic ASP, Bubble, and dabbled in PHP. I'd
-              link to think that presented with a need and a bit of time, I
+              like to think that presented with a need and a bit of time, I
               could become proficient in other languages and platforms as well.
             </P>
             <P>
               I have included a small sample of some of the projects I have
-              developed or contributed in, to showcase my flexibility in
+              developed or contributed to, to showcase my flexibility in
               development.
             </P>
           </div>
